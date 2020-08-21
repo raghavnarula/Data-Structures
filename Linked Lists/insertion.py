@@ -65,14 +65,14 @@ n3 = Node(3)
 n1.nextval = n2
 n2.nextval = n3
 
-# list1.print_list()
-# list1.insertion_begin(0)
-# list1.print_list()
-# list1.insertion_end(4)
-# list1.print_list()
-# list1.print_at_position(2)
-# list1.insertion_position("Tue",3)
-# list1.print_list()
+list1.print_list()
+list1.insertion_begin(0)
+list1.print_list()
+list1.insertion_end(4)
+list1.print_list()
+list1.print_at_position(2)
+list1.insertion_position("Tue",3)
+list1.print_list()
 
 list2 = List()
 list2.headval = Node("Mon")
