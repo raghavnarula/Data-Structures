@@ -67,6 +67,7 @@ if __name__=='__main__':
     n1.nextval = n2
     n2.nextval = n3
 
+    
     list1.print_list()
     list1.insertion_begin(0)
     list1.print_list()
