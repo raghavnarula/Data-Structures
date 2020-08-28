@@ -22,7 +22,7 @@ class List:
         NewNode.nextval = self.headval
         self.headval = NewNode
 
-    def insertion_end(self,data_val):
+    def insert(self,data_val): # this inserts at the end
         NewNode = Node(data_val)
         if self.headval is None:
             self.headval = NewNode
@@ -71,7 +71,7 @@ if __name__=='__main__':
     list1.print_list()
     list1.insertion_begin(0)
     list1.print_list()
-    list1.insertion_end(4)
+    list1.insert(4)
     list1.print_list()
     list1.print_at_position(2)
     list1.insertion_position("Tue",3)
