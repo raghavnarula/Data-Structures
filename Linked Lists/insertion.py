@@ -46,6 +46,7 @@ class List:
         if pos==0:
             NewNode.nextval = self.headval
             self.headval = NewNode
+            return 
         else:
             for _ in range(pos-1):
                 if last.nextval is not None:
@@ -56,31 +57,32 @@ class List:
         
 
 
-    
-list1 = List()
-list1.headval = Node(1)
-n1 = list1.headval
-n2 = Node(2)
-n3 = Node(3)
-n1.nextval = n2
-n2.nextval = n3
+if __name__=='__main__':
 
-list1.print_list()
-list1.insertion_begin(0)
-list1.print_list()
-list1.insertion_end(4)
-list1.print_list()
-list1.print_at_position(2)
-list1.insertion_position("Tue",3)
-list1.print_list()
+    list1 = List()
+    list1.headval = Node(1)
+    n1 = list1.headval
+    n2 = Node(2)
+    n3 = Node(3)
+    n1.nextval = n2
+    n2.nextval = n3
 
-list2 = List()
-list2.headval = Node("Mon")
-list2.insertion_position("Tue",1)
-list2.insertion_position("Wed",2)
-list2.print_list()
-list2.insertion_position(2,0) #list2.insertion_begin(2)
-list2.print_list()
+    list1.print_list()
+    list1.insertion_begin(0)
+    list1.print_list()
+    list1.insertion_end(4)
+    list1.print_list()
+    list1.print_at_position(2)
+    list1.insertion_position("Tue",3)
+    list1.print_list()
+
+    list2 = List()
+    list2.headval = Node("Mon")
+    list2.insertion_position("Tue",1)
+    list2.insertion_position("Wed",2)
+    list2.print_list()
+    list2.insertion_position(2,0) #list2.insertion_begin(2)
+    list2.print_list()
 
 
 
