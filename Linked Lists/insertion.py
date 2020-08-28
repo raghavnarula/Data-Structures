@@ -37,7 +37,7 @@ class List:
         last = self.headval
         for _ in range(pos): 
             last = last.nextval
-        print(f"At position {pos} we have,{last.dataval}")
+        return last.dataval
 
     # insertion at specific position
     def insertion_position(self,data,pos):

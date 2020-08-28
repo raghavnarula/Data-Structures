@@ -5,8 +5,7 @@ list1 = insertion.List()
 list1.headval = insertion.Node(1) # when we are importing a class then we have to do 
 list1.insertion_position(2,1)
 list1.print_list()
-class Node(insertion.Node):
-    pass
+
 class List(insertion.List):
     def deletion(self,position):
         node = self.headval
@@ -20,7 +19,7 @@ class List(insertion.List):
 
 if __name__=='__main__':
     List1 = List()
-    List1.headval = Node(10)
+    List1.headval = insertion.Node(10)
     List1.insertion_position(20,1)
     List1.insertion_position(30,2)
     List1.insertion_position(40,3)
