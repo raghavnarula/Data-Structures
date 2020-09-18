@@ -3,7 +3,7 @@
 # here we are inserting the in list only at the first and last position.
     
 class Node:
-    def __init__(self,dataval=None):
+    def __init__(self,dataval):
         self.dataval = dataval
         self.nextval = None
 
@@ -26,13 +26,15 @@ class List:
         NewNode = Node(data_val)
         if self.headval is None:
             self.headval = NewNode
-            return
+            return 
         else:
             last = self.headval 
             # iterate to last node address
             while last.nextval is not None:
                 last = last.nextval
             last.nextval = NewNode
+        return 0
+        
     def print_at_position(self,pos):
         last = self.headval
         for _ in range(pos): 

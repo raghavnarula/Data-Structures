@@ -9,14 +9,14 @@ class SLinkedList: # creating a head of the linked list
     def __init__(self):
         self.headval = None
 
-list1 = SLinkedList() # object declared
+list1 = SLinkedList() # object declared and because of the contructor we have made a head node 
 list1.headval = Node("Mon")
-
+e1 = list1.headval
 e2 = Node("Tue")
 e3 = Node("wed")
 e4 = Node("Wed")
 # linking the nodes
 
-list1.headval.nextval = e2
+e1.nextval = e2
 e2.nextval = e3
 e3.nextval = e4
