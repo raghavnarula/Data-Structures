@@ -6,7 +6,7 @@ class List(deletion.List):
         while travel.nextval is not None:
             # compare the next element with current
             if (travel.dataval == travel.nextval.dataval):
-                # deleting manually for time complexity rather than function
+                # deleting manually for time complexity rather than using a function
                 travel.nextval = travel.nextval.nextval
                 continue
             else:

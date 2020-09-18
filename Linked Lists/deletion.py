@@ -1,10 +1,8 @@
 import insertion
-print("THe positions start from 0")
 
 list1 = insertion.List()
 list1.headval = insertion.Node(1) # when we are importing a class then we have to do 
 list1.insertion_position(2,1)
-list1.print_list()
 
 class List(insertion.List):
     def deletion(self,position):
@@ -18,6 +16,7 @@ class List(insertion.List):
         node.nextval = node.nextval.nextval
 
 if __name__=='__main__':
+    print("The positions start from 0")
     List1 = List()
     List1.headval = insertion.Node(10)
     List1.insertion_position(20,1)
