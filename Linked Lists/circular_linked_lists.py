@@ -6,7 +6,7 @@
 
 import insertion,deletion,middleOfList
 class List(middleOfList.List):
-    def circular_insertion(self,data):
+    def circular_insertion(self,data): # inserts the element at the last
         new = insertion.Node(data)
         
         # connect the new node to previous linked list
@@ -32,10 +32,11 @@ class List(middleOfList.List):
         last = self.headval
         i = 0
         while i < len:
-            print(last.dataval,end =" ")
+            print()
+            print(last.dataval,"pointing to :",last.nextval,end =" ")
             last = last.nextval
             i += 1
-        print(" ")  
+        print(" ")
 
 if "__main__"==__name__:
     list = List()
@@ -44,6 +45,6 @@ if "__main__"==__name__:
     list.insert(250)
     list.insert(260)
     list.circular_insertion(270)
-    # list.insert(280)
+    list.insertion_position(300,5)  
     list.length_circular()
     list.print_list_circular()

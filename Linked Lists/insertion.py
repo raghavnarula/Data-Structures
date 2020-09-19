@@ -24,6 +24,7 @@ class List:
 
     def insert(self,data_val): # this inserts at the end
         NewNode = Node(data_val)
+        # print(NewNode,NewNode.dataval) printing extra info about the node
         if self.headval is None:
             self.headval = NewNode
             return 
@@ -44,6 +45,7 @@ class List:
     # insertion at specific position
     def insertion_position(self,data,pos):
         NewNode = Node(data)
+        # print(NewNode,NewNode.dataval) printing info about the node
         last = self.headval
         if pos==0:
             NewNode.nextval = self.headval
