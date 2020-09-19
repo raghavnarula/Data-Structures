@@ -17,13 +17,13 @@ class List:
             print(printval.dataval,end =" ")
             printval = printval.nextval
         print(" ")
-    def insertion_begin(self,new_data):
-        NewNode = Node(new_data)
+    def insertion_begin(self,dataval):
+        NewNode = Node(dataval)
         NewNode.nextval = self.headval
         self.headval = NewNode
 
-    def insert(self,data_val): # this inserts at the end
-        NewNode = Node(data_val)
+    def insert(self,dataval): # this inserts at the end
+        NewNode = Node(dataval)
         # print(NewNode,NewNode.dataval) printing extra info about the node
         if self.headval is None:
             self.headval = NewNode
