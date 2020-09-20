@@ -2,11 +2,12 @@
 import sys
 import insertion,deletion,middleOfList
 
-list3 = insertion.List()
 
 
 class List(middleOfList.List):
     def multiply(self,list):
+    # create a new list for multiply
+        list_product = insertion.List()
         if self.length() !=list.length():
             print("Multiplication cannot be done!",end=" ")
         else:
@@ -15,22 +16,36 @@ class List(middleOfList.List):
             last2 = list.headval
             while last1 is not None:
                 x = (last1.dataval)*(last2.dataval)
-                list3.insert(x)
+                list_product.insert(x)
                 last1 = last1.nextval
                 last2 = last2.nextval
-        return 
+        return list_product.print_list() 
 
-list1 = List()
-list1.insert(10)
-list1.insert(20)
-list1.insert(30)
+if __name__ =="__main__":
+    list1 = List()
+    list1.insert(10)
+    list1.insert(20)
+    list1.insert(30)
 
 
+    list2 = List()
+    list2.insert(0)
+    list2.insert(0)
+    # list2.insert(0)
 
-list2 = List()
-list2.insert(0)
-list2.insert(0)
-# list2.insert(0)
+    list1.multiply(list2)
 
-list1.multiply(list2)
-list3.print_list()
+    list4 = List()
+    list4.insert(30)
+    list4.insert(50)
+    list4.insert(50)
+
+    list5 = List()
+    list5.insert(3)
+    list5.insert(3)
+    list5.insert(3)
+
+    list4.multiply(list5)
+    
+
+    list
