@@ -44,7 +44,6 @@ if __name__ =="__main__":
     list1.print_list()
     list1.insert_begin_doubly(0)
     list1.print_list()
-    list1.
 
 
 
