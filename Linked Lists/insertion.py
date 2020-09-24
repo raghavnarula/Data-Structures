@@ -58,7 +58,16 @@ class List:
         # now we are 1 position before the place where we want to insert
             NewNode.nextval = last.nextval
             last.nextval = NewNode
-        
+    
+    def print_position(self,data):
+        # finding the positions of the elements 
+        last = self.headval
+        count = 0
+        while (last.nextval is not None):
+            if last.dataval == data:
+                return count
+            count +=1
+            last = last.nextval
 
 
 if __name__=='__main__':
