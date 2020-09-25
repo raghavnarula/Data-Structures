@@ -11,20 +11,28 @@ class List(product_linked_list.List):
         # iterate over the linked list and then make a backwards pointer to node
         prev = None
         current = self.headval
-        while (current is not None):
-            # the current must move to next node also
-            # we create a copy of node we want so we can access it later
-            temp = current
+        while current is not None:
+            # print("Current",current.dataval)
+            next_add = current.nextval
+            # print(nextval.dataval)
+            current.nextval  = prev
+            # print("prev",prev)
+            prev = current
+            current = next_add
+            if current.nextval == None:
+                current.nextval = prev
+                break
+        print("The reversed order is :")
+        while current is not None:
+            print(current.dataval,end =" ")
             current = current.nextval
-            temp.nextval = prev
-            prev = temp
-
+        
 list = List()
-list.insertion_begin(10)
-list.insertion_begin(20)
-list.insertion_begin(30)
-list.reverse()
+list.insert(10)
+list.insert(20)
+list.insert(30)
 list.print_list()
+list.reverse()
 
 
 
