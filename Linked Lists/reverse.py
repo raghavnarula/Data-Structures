@@ -20,10 +20,11 @@ class List(product_linked_list.List):
             prev = temp
 
 list = List()
-list.insert(10)
-list.insert(20)
-list.insert(30)
+list.insertion_begin(10)
+list.insertion_begin(20)
+list.insertion_begin(30)
 list.reverse()
+list.print_list()
 
 
 
