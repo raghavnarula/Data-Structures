@@ -12,27 +12,22 @@ class List(product_linked_list.List):
         prev = None
         current = self.headval
         while current is not None:
-            # print("Current",current.dataval)
-            next_add = current.nextval
-            # print(nextval.dataval)
+            next = current.nextval
             current.nextval  = prev
-            # print("prev",prev)
             prev = current
-            current = next_add
-            if current.nextval == None:
-                current.nextval = prev
-                break
-        print("The reversed order is :")
-        while current is not None:
-            print(current.dataval,end =" ")
-            current = current.nextval
-        
+            current = next
+        self.headval = prev
+
+        # def reverse_k_nodes(self,k):
+            
+
 list = List()
 list.insert(10)
 list.insert(20)
 list.insert(30)
 list.print_list()
 list.reverse()
+list.print_list()
 
 
 
