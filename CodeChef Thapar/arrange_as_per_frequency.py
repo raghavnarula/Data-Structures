@@ -43,7 +43,6 @@ for char in input_string:
       frequencies[char] += 1
    else: 
       frequencies[char] = 1
-# n8 o 11 
 print(frequencies)
 list1 = []
 for key, value in frequencies.items() :
