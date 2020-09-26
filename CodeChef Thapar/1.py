@@ -1,3 +1,4 @@
+# Final submiited code
 input_string = input("")
 frequencies = {} 
   
