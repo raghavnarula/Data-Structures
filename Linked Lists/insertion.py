@@ -1,7 +1,6 @@
 # insertion in linked list is very key thing.
 
 # here we are inserting the in list only at the first and last position.
-    
 class Node:
     def __init__(self,dataval):
         self.dataval = dataval
@@ -63,15 +62,40 @@ class List:
         # finding the positions of the elements 
         last = self.headval
         count = 0
-        while (last.nextval is not None):
+        while (last is not None):
             if last.dataval == data:
                 return count
             count +=1
             last = last.nextval
-
+    
+    def insert_middle(self,data):
+        # inserts the element at the middle of the linked list
+        # 1 2 3 4 5 (insert 10)
+        # 1 2 3 10 4 5 
+        # or 
+        # 1 2 4 5 (insert 3)
+        # 1 2 3 4 5
+        fast = self.headval.nextval
+        slow = self.headval
+        while fast is not None and fast.nextval is not None:
+            fast = fast.nextval.nextval
+            slow = slow.nextval
+        # now insert at the position next to slow pointer
+        new_node = Node(data)
+        new_node.nextval = slow.nextval
+        slow.nextval = new_node
+    def insert_middle_between(self,start_number,end_number,data):
+        # start and end must not be repeating in the linked lists
+        # find the position of start and end
+        start_pos = List.print_position(self,start_number)
+        end_pos = List.print_position(self,end_number)
+        print(start_pos,end_pos)
+        middle = int((start_pos + end_pos)/2)
+        print(middle)
+        List.insertion_position(self,data,middle+1)
+        
 
 if __name__=='__main__':
-
     list1 = List()
     list1.headval = Node(1)
     n1 = list1.headval
@@ -98,5 +122,16 @@ if __name__=='__main__':
     list2.insertion_position(2,0) #list2.insertion_begin(2)
     list2.print_list()
 
+    list3 = List()
+    list3.insert(10)
+    list3.insert(20)
+    list3.insert(30)
+    list3.insert(40)
+    list3.insert(60)
+    list3.insert(70)
+    list3.insert(80)
 
-
+    list3.print_list()
+    # print(list3.print_position(80))
+    list3.insert_middle_between(40,60,50)
+    list3.print_list()
