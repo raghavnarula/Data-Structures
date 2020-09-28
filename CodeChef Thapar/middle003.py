@@ -38,7 +38,8 @@ class List:
             NewNode.nextval = last.nextval
             last.nextval = NewNode
     
-    def insert_begin(self,dataval):
+    
+    def insertion_begin(self,dataval):
         NewNode = Node(dataval)
         self.list_nodes_storage.append(NewNode)
         NewNode.nextval = self.headval
@@ -78,11 +79,11 @@ class List:
         # if we want to insert at the beginning
         last = self.headval
         if last.dataval == after_element: # first position.
-            List.insert_begin(self,data)
-        else:
-            while last.nextval.dataval != after_element:
-                last = last.nextval
-            List.insert_specific(self,data,last.dataval)
+            List.insert_begin()
+
+        while last.nextval.dataval != after_element:
+            last = last.nextval
+        List.insert_specific(self,data,last.dataval)
         
     def insert_middle_between(self,start_number,end_number,data):
 
@@ -164,7 +165,6 @@ class List:
         for val in value_access:
             print(val,end =" ")
         print()
-        
     def frequency_printer(self):
         nodes = self.list_nodes_storage
         frequencies = {}        
