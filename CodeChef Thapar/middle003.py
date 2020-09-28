@@ -114,7 +114,6 @@ class List:
             last = last.nextval
             if last.nextval == None:
                 last.nextval = self.headval
-                # flag = 1
 
 
         address.nextval = last
