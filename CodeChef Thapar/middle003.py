@@ -164,6 +164,7 @@ class List:
         for val in value_access:
             print(val,end =" ")
         print()
+        
     def frequency_printer(self):
         nodes = self.list_nodes_storage
         frequencies = {}        
