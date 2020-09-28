@@ -39,7 +39,7 @@ class List:
             last.nextval = NewNode
     
     
-    def insertion_begin(self,dataval):
+    def insert_begin(self,dataval):
         NewNode = Node(dataval)
         self.list_nodes_storage.append(NewNode)
         NewNode.nextval = self.headval
@@ -79,7 +79,7 @@ class List:
         # if we want to insert at the beginning
         last = self.headval
         if last.dataval == after_element: # first position.
-            List.insert_begin()
+            List.insert_begin(self,data)
 
         while last.nextval.dataval != after_element:
             last = last.nextval
@@ -102,7 +102,7 @@ class List:
             last = last.nextval
         return False
     def node_between(self,x,p):
-        flag = 0
+        # flag = 0
         last = self.headval
         if last.dataval == x:
             pass
@@ -114,7 +114,7 @@ class List:
             last = last.nextval
             if last.nextval == None:
                 last.nextval = self.headval
-                flag = 1
+                # flag = 1
 
 
         address.nextval = last
