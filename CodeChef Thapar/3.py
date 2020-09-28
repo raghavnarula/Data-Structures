@@ -88,10 +88,12 @@ def ReversespiralPrint(m, n, a):
 
 # print(my_matrix,end =" ")
 
-a = [[8,0,0,0], 
+a = [
+     [8,0,0,0], 
      [0,6,5,0], 
      [0,0,0,9],
-     [0,0,7,0]] 
+     [0,0,7,0]
+    ] 
 
 ReversespiralPrint(3, 3, a) 
 # rows and columns and the matrix as input
