@@ -5,21 +5,54 @@ class Node:
         self.rightval = None
     
 class Tree:
-    def __init__(self):
-        pass
-    def insert(self,root,data):
-        new_node = Node(data)
-        traverse = root
-        while(traverse.leftval is not None or traverse.rightval is not None):
-            if traverse.leftval is None:
-                traverse.leftval = new_node
+    def __init__(self,root):
+        self.q = [root]
+        self.q2 = []
+    def insert(self,root,node):
+        # new_node = Node(data)
+        # traverse like BFS
+        while(1):
+            if self.q[0].leftval is None:
+                # then insert the value 
+                self.q[0].leftval  = node
                 break
-            elif traverse.rightval is None:
-                traverse.rightval = new_node
+            elif self.q[0].rightval is None:
+                self.q[0].rightval = node
                 break
-            # now we need to move forward also if both conditions are checked
+            else:
+                self.q.append(self.q[0].leftval)
+                self.q.append(self.q[0].rightval)
+            
+            del self.q[0]
+    
+    def preorder(self,root):
+        if root is None:
+            return
+        else:
+            Tree.preorder(self,root.leftval)
+            self.q2.append(root.dataval)
+            Tree.preorder(self,root.rightval)
+    
+    def printer(self):
+        print(self.q2)
 
-            # check at left child position first and then the right child posiition
+
+root = Node(10)
+root.leftval = Node(11)
+root.rightval = Node(9)
+root.leftval.leftval = Node(7)
+root.rightval.leftval = Node(15)
+root.rightval.rightval = Node(8)
+
+s = Tree(root)
+s.insert(root,Node(12))
+
+s.preorder(root)
+s.printer()
+
+
+        
+
 
 
             
