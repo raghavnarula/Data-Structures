@@ -24,13 +24,14 @@ class Tree:
             
 #         # repeat this process till we get the queue to be empty
 
-root = Node(1)
-root.leftval = Node(2)
-root.rightval = Node(3)
-root.leftval.leftval = Node(4)
-root.leftval.rightval =Node(5)
-root.rightval.leftval = Node(8)
-root.rightval.rightval = Node(8)
+if __name__ == '__main___':
+    root = Node(1)
+    root.leftval = Node(2)
+    root.rightval = Node(3)
+    root.leftval.leftval = Node(4)
+    root.leftval.rightval =Node(5)
+    root.rightval.leftval = Node(8)
+    root.rightval.rightval = Node(8)
 
-s = Tree(root)
-s.traversal(root)
+    s = Tree(root)
+    s.traversal(root)

@@ -25,30 +25,31 @@ class Tree:
             
             del self.q[0]
     
-    def preorder(self,root):
+    def inorder(self,root):
         if root is None:
             return
         else:
-            Tree.preorder(self,root.leftval)
+            Tree.inorder(self,root.leftval)
             self.q2.append(root.dataval)
-            Tree.preorder(self,root.rightval)
+            Tree.inorder(self,root.rightval)
     
     def printer(self):
         print(self.q2)
 
 
-root = Node(10)
-root.leftval = Node(11)
-root.rightval = Node(9)
-root.leftval.leftval = Node(7)
-root.rightval.leftval = Node(15)
-root.rightval.rightval = Node(8)
+if __name__ == '__main__':
+    root = Node(10)
+    root.leftval = Node(11)
+    root.rightval = Node(9)
+    root.leftval.leftval = Node(7)
+    root.rightval.leftval = Node(15)
+    root.rightval.rightval = Node(8)
 
-s = Tree(root)
-s.insert(root,Node(12))
+    s = Tree(root)
+    s.insert(root,Node(12))
 
-s.preorder(root)
-s.printer()
+    s.inorder(root)
+    s.printer()
 
 
         
