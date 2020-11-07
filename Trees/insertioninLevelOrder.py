@@ -36,7 +36,6 @@ class Tree:
     def printer(self):
         print(self.q2)
 
-
 if __name__ == '__main__':
     root = Node(10)
     root.leftval = Node(11)
@@ -44,13 +43,10 @@ if __name__ == '__main__':
     root.leftval.leftval = Node(7)
     root.rightval.leftval = Node(15)
     root.rightval.rightval = Node(8)
-
     s = Tree(root)
     s.insert(root,Node(12))
-
     s.inorder(root)
     s.printer()
-
 
         
 
