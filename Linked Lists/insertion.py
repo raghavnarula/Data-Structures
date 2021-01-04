@@ -1,5 +1,4 @@
 # insertion in linked list is very key thing.
-
 # here we are inserting the in list only at the first and last position.
 class Node:
     def __init__(self,dataval):
