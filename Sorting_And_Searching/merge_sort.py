@@ -11,7 +11,7 @@ def mergeSort(a):
         # print(left,right)``
         mergeSort(left)
         mergeSort(right)
-    # print("Print the list",a)
+        # print("Print the list",a)
 
     # See merging the code for 2 sorted_arrays in the main folder for this 
         i = j = k = 0

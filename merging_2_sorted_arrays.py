@@ -1,3 +1,4 @@
+'''
 a = [1,3,5,7,9,24]
 b = [2,4,6,8,10,11]
 final = []
@@ -23,3 +24,6 @@ for x in range(i,len(a)):
     final.append(a[x])
 for x in range(j,len(b)):
     final.append(b[x])
+'''
+# merge 2 sorted arrays 
+def merge()
