@@ -19,11 +19,11 @@ class Tree:
             elif self.q[0].rightval is None:
                 self.q[0].rightval = node
                 break
-            else:
+            else: # both are filled insert the value left to right ..
                 self.q.append(self.q[0].leftval)
                 self.q.append(self.q[0].rightval)
             
-            del self.q[0]
+            del self.q[0] # delete the 0th value and move again 
     
     def inorder(self,root):
         if root is None:

@@ -1,37 +1,40 @@
 # two functions would be created that would be used for traversing in BFS.
-# first is the print nodes at a given level.
-# second is the print out the the levels in the tree...
+# Using queue
+
+# insert the root append the left child and then the right child of the root.
 
 class Node:
     def __init__(self,data):
         self.dataval = data
-        self.leftval = None
-        self.rightval = None
+        self.left = None
+        self.right = None
 
 
-class Tree:
-    def __init__(self,root):
-        self.q = [root]
-    def traversal(self,root):
-        while (len(self.q)>0):
-            print(self.q[0].dataval)
-            node = self.q.pop(0)
+def printLevelOrder(root):
+    if root is None:
+        return
+    
+    queue = []
 
-            if node.leftval is not None:
-                self.q.append(node.leftval)
-            if node.rightval is not None:
-                self.q.append(node.rightval )
-            
-#         # repeat this process till we get the queue to be empty
+    queue.append(root)
 
-if __name__ == '__main___':
-    root = Node(1)
-    root.leftval = Node(2)
-    root.rightval = Node(3)
-    root.leftval.leftval = Node(4)
-    root.leftval.rightval =Node(5)
-    root.rightval.leftval = Node(8)
-    root.rightval.rightval = Node(8)
+    while (len(queue) > 0):
+        print(queue[0].dataval)
 
-    s = Tree(root)
-    s.traversal(root)
+        node = queue.pop(0)
+
+        #Enqueue left child
+        if node.left is not None:
+            queue.append(node.left)
+ 
+        # Enqueue right child
+        if node.right is not None:
+            queue.append(node.right)
+
+root = Node(1)
+root.left = Node(2)
+root.right = Node(3)
+root.left.left = Node(4)
+root.left.right = Node(5)
+
+printLevelOrder(root)
