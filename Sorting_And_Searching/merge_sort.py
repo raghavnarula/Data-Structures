@@ -8,7 +8,7 @@ def mergeSort(a):
         half = len(a)//2
         left = a[:half]
         right = a[half:]
-        # print(left,right)``
+        # print(left,right)
         mergeSort(left)
         mergeSort(right)
         # print("Print the list",a)
